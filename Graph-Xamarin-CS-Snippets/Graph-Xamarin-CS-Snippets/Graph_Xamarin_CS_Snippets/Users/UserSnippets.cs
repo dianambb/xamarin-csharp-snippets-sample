@@ -47,6 +47,64 @@ namespace Graph_Xamarin_CS_Snippets
             return currentUserName;
         }
 
+        // Returns information about the signed-in user 
+        public static async Task<List<Microsoft.Graph.Task>> GetMyTasksAsync()
+        {
+            List<Microsoft.Graph.Task> currentUserTasks = null;
+
+            try
+            {
+                var graphClient = AuthenticationHelper.GetAuthenticatedClient();
+
+                var currentUserTasksObject = await graphClient.Me.Tasks.Request().GetAsync();
+                currentUserTasks = currentUserTasksObject.ToList();
+
+                foreach(Microsoft.Graph.Task t in currentUserTasks)
+                { 
+                    Debug.WriteLine("Task: " + t.Title);
+                }
+            }
+
+
+            catch (ServiceException e)
+            {
+                Debug.WriteLine("We could not get the current user's tasks: " + e.Error.Message);
+                return null;
+
+            }
+
+            return currentUserTasks;
+        }
+
+        // Returns information about the signed-in user 
+        public static async Task<List<Microsoft.Graph.Plan>> GetMyPlansAsync()
+        {
+            List<Microsoft.Graph.Plan> currentUserPlans = null;
+
+            try
+            {
+                var graphClient = AuthenticationHelper.GetAuthenticatedClient();
+
+                var currentUserPlansObject = await graphClient.Me.Plans.Request().GetAsync();
+                currentUserPlans = currentUserPlansObject.ToList();
+
+                foreach (Microsoft.Graph.Plan plan in currentUserPlans)
+                {
+                    Debug.WriteLine("Plan: " + plan.Title);
+                }
+            }
+
+
+            catch (ServiceException e)
+            {
+                Debug.WriteLine("We could not get the current user's plans: " + e.Error.Message);
+                return null;
+
+            }
+
+            return currentUserPlans;
+        }
+
 
         // Returns all of the users in the directory of the signed-in user's tenant. 
         public static async Task<IGraphServiceUsersCollectionPage> GetUsersAsync()

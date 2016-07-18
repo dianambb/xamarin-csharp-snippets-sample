@@ -28,7 +28,7 @@ namespace Graph_Xamarin_CS_Snippets
                 try
                 {
                     graphClient = new GraphServiceClient(
-                        "https://graph.microsoft.com/v1.0",
+                        "https://graph.microsoft-ppe.com/beta",
                         new DelegateAuthenticationProvider(
                             async (requestMessage) =>
                             {

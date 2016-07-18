@@ -159,6 +159,9 @@
   <data name="GetAllGroups" xml:space="preserve">
     <value>Get All Groups</value>
   </data>
+  <data name="GetBucketsInAPlan" xml:space="preserve">
+    <value>Get Buckets In a Plan</value>
+  </data>
   <data name="GetDirects" xml:space="preserve">
     <value>Get Directs</value>
   </data>
@@ -180,11 +183,20 @@
   <data name="GetMessages" xml:space="preserve">
     <value>Get Messages</value>
   </data>
+  <data name="GetMyPlans" xml:space="preserve">
+    <value>Get My Plans</value>
+  </data>
+  <data name="GetMyTasks" xml:space="preserve">
+    <value>Get My Tasks</value>
+  </data>
   <data name="GetOwners" xml:space="preserve">
     <value>Get Owners</value>
   </data>
   <data name="GetPhoto" xml:space="preserve">
     <value>Get Photo</value>
+  </data>
+  <data name="GetTaskChecklist" xml:space="preserve">
+    <value>Get Task Checklist</value>
   </data>
   <data name="GetUserFiles" xml:space="preserve">
     <value>Get User Files</value>

@@ -23,6 +23,20 @@ namespace Graph_Xamarin_CS_Snippets
             return currentUser != null;
         }
 
+        public static async Task<bool> TryGetMyTasksAsync()
+        {
+            var currentTasks = await UserSnippets.GetMyTasksAsync();
+
+            return currentTasks != null;
+        }
+
+        public static async Task<bool> TryGetMyPlansAsync()
+        {
+            var currentPlans = await UserSnippets.GetMyPlansAsync();
+
+            return currentPlans != null;
+        }
+
         public static async Task<bool> TryGetUsersAsync()
         {
             var users = await UserSnippets.GetUsersAsync();

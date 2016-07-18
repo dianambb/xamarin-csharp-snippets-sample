@@ -188,6 +188,15 @@ namespace Graph_Xamarin_CS_Snippets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Get Buckets In a Plan.
+        /// </summary>
+        internal static string GetBucketsInAPlan {
+            get {
+                return ResourceManager.GetString("GetBucketsInAPlan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Get Directs.
         /// </summary>
         internal static string GetDirects {
@@ -251,6 +260,24 @@ namespace Graph_Xamarin_CS_Snippets {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Get My Plans.
+        /// </summary>
+        internal static string GetMyPlans {
+            get {
+                return ResourceManager.GetString("GetMyPlans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Get My Tasks.
+        /// </summary>
+        internal static string GetMyTasks {
+            get {
+                return ResourceManager.GetString("GetMyTasks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Get Owners.
         /// </summary>
         internal static string GetOwners {
@@ -265,6 +292,15 @@ namespace Graph_Xamarin_CS_Snippets {
         internal static string GetPhoto {
             get {
                 return ResourceManager.GetString("GetPhoto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Get Task Checklist.
+        /// </summary>
+        internal static string GetTaskChecklist {
+            get {
+                return ResourceManager.GetString("GetTaskChecklist", resourceCulture);
             }
         }
         

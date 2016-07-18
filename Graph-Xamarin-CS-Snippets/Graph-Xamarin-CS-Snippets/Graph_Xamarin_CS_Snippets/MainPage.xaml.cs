@@ -55,6 +55,10 @@ namespace Graph_Xamarin_CS_Snippets
 
             snippetList.Children.Add(new Label { Text = AppResources.PersonalWorkAccess, FontSize = Xamarin.Forms.Device.GetNamedSize(NamedSize.Medium, typeof(Label)) });
             snippetList.Children.Add(new CheckBox { StoryName = AppResources.GetMe, GroupName = "Users", AccountType = "All", RunStoryAsync = UserStories.TryGetMeAsync });
+            snippetList.Children.Add(new CheckBox { StoryName = AppResources.GetMyTasks, GroupName = "Users", AccountType = "All", RunStoryAsync = UserStories.TryGetMyTasksAsync });
+            snippetList.Children.Add(new CheckBox { StoryName = AppResources.GetMyPlans, GroupName = "Users", AccountType = "All", RunStoryAsync = UserStories.TryGetMyPlansAsync });
+            snippetList.Children.Add(new CheckBox { StoryName = AppResources.GetTaskChecklist, GroupName = "Tasks", AccountType = "All", RunStoryAsync = TaskStories.TryGetTaskChecklistAsync });
+            snippetList.Children.Add(new CheckBox { StoryName = AppResources.GetBucketsInAPlan, GroupName = "Plan", AccountType = "All", RunStoryAsync = PlanStories.TryGetPlanBucketsAsyncAsync });
             snippetList.Children.Add(new CheckBox { StoryName = AppResources.ReadUsers, GroupName = "Users", AccountType = "All", RunStoryAsync = UserStories.TryGetUsersAsync });
             snippetList.Children.Add(new CheckBox { StoryName = AppResources.GetDrive, GroupName = "Users", AccountType = "All", RunStoryAsync = UserStories.TryGetCurrentUserDriveAsync });
             snippetList.Children.Add(new CheckBox { StoryName = AppResources.GetEvents, GroupName = "Users", AccountType = "All", RunStoryAsync = UserStories.TryGetEventsAsync });

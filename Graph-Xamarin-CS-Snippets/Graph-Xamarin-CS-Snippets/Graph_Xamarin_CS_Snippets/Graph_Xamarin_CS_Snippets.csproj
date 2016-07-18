@@ -50,8 +50,12 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Plans\PlanSnippets.cs" />
+    <Compile Include="Plans\PlanStories.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoryDefinition.cs" />
+    <Compile Include="Tasks\TaskSnippets.cs" />
+    <Compile Include="Tasks\TaskStories.cs" />
     <Compile Include="Users\UserSnippets.cs" />
     <Compile Include="Users\UserStories.cs" />
     <Compile Include="ViewModelBase.cs" />
@@ -77,13 +81,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Graph, Version=1.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.Graph.1.0.1\lib\portable-net45+netcore45+wpa81+win8\Microsoft.Graph.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Microsoft.Graph">
+      <HintPath>..\..\..\..\msgraph-sdk-dotnet\src\Microsoft.Graph\bin\Debug\Microsoft.Graph.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Identity.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.Identity.Client.1.0.304142221-alpha\lib\portable-net45+win\Microsoft.Identity.Client.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Microsoft.Graph.Core">
+      <HintPath>..\..\..\..\msgraph-sdk-dotnet\src\Microsoft.Graph\bin\Debug\Microsoft.Graph.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client">
+      <HintPath>..\..\..\..\microsoft-authentication-library-for-dotnet\src\MSAL.PCL\bin\Debug\Microsoft.Identity.Client.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.6.0.2\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
